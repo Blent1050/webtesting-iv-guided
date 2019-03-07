@@ -21,7 +21,7 @@ describe('hobbits model', () => {
       const hobbits = await db('hobbits');
       expect(hobbits).toHaveLength(2);
     });
-    it('insert the provided hobbits into the db', async () => {
+    it('should insert a hobbit and check name', async () => {
       let hobbit = await Hobbits.insert({name: 'gaffer'});
       expect(hobbit.name).toBe('gaffer');
 
